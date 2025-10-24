@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    container_name: bilet-platform
+    ports:
+      - "8080:80"
+    volumes:
+      - ./public:/var/www/html
+      - ./src:/var/www/src
+      - ./data:/var/www/data
+    environment:
+      - PHP_TIMEZONE=Europe/Istanbul
+      - SQLITE_DB_PATH=/var/www/data/database.db
+    restart: unless-stopped
+    networks:
+      - bilet-network
+
+networks:
+  bilet-network:
+    driver: bridge
