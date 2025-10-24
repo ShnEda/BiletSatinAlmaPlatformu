@@ -1,1 +1,2 @@
-*DOCKER KULLANAMIYORUM </3*
+# *DOCKER KULLANAMIYORUM </3*
+**php çok kötü :(**
