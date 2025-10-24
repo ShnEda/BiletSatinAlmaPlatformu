@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   web:
-    build: .
+    build: ./src
     container_name: bilet-platform
     ports:
       - "8080:80"
